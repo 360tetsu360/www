@@ -38,7 +38,37 @@ body{
     z-index: 1;
     transform: translateY(100px);
 }
-.container .card:hover .face.face1
+/*.container .card:hover .face.face1
+{
+    border:  2px solid #ff0057;
+    box-sizing: border-box;
+    transform: translateY(0px);
+    background: #ff0057;
+}*/
+.container .card input {
+    display: none;
+}
+.container .card label {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+.container .card input:checked ~ label{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+.container .card input:checked ~ .face.face1
 {
     border:  2px solid #ff0057;
     box-sizing: border-box;
@@ -50,7 +80,7 @@ body{
     opacity: 0.4;
     transition: 0.5s;
 }
-.container .card:hover .face.face1 .content1
+.container .card input:checked ~ .face.face1 .content1
 {
     opacity: 1;
 }
@@ -73,7 +103,7 @@ body{
     box-sizing: border-box;
     transform: translateY(-100px);
 }
-.container .card:hover .face.face2
+.container .card input:checked ~ .face.face2
 {
     transform: translateY(0px);
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
