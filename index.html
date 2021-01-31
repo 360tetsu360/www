@@ -4,10 +4,20 @@
         <meta charset="utf-8">
         <title>study</title>
         <link rel="stylesheet" href="style.css">
+        <script>
+            function onlyOne(checkbox) {
+                var checkboxes = document.getElementsByName('check')
+                checkboxes.forEach((item) => {
+                    if (item !== checkbox) item.checked = false
+                })
+            }
+        </script>
     </head>
     <body>
         <div class="container">
             <div class="card">
+                <input type="checkbox" id="test1" onclick="onlyOne(this)" name="check">
+                <label for="test1"></label>
                 <div class="face face1">
                     <div class="content1">
                         <h3>WHO AM I</h3>
@@ -21,6 +31,8 @@
                 </div>
             </div>
             <div class="card">
+                <input type="checkbox" id="test2" onclick="onlyOne(this)" name="check">
+                <label for="test2"></label>
                 <div class="face face1">
                     <div class="content1">
                         <h3>WHAT IS THIS</h3>
@@ -33,18 +45,22 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content1">
-                        <h3>HOW TO MAKE</h3>
+            <div class="card" >
+                
+                <input type="checkbox" id="test3" onclick="onlyOne(this)" name="check">
+                <label for="test3"></label>
+                    <div class="face face1">
+                        <div class="content1">
+                            <h3>HOW TO MAKE</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="face face2">
-                    <div class="content1">
-                        <p>idk</p>
-                        <a href="#">Read more</a>
+                    <div class="face face2">
+                        <div class="content1">
+                            <p>idk</p>
+                            <a href="#">Read more</a>
+                        </div>
                     </div>
-                </div>
+                
             </div>
         </div>
         
