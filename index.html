@@ -12,6 +12,7 @@
                 })
             }
         </script>
+        <script type='application/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script>
     </head>
     <body>
         <div class="container">
@@ -63,6 +64,12 @@
                 
             </div>
         </div>
-        
+        <script>
+            if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+        </script>
     </body>
 </html>
