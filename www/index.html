@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='application/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script>
+</head>
+<body>
+    <div class="stalker"></div>
+    <div class="window">
+        <div class="container">
+            <div class="hexagon" class="ful"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+                    if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+            onSelectStart="return false;"
+        const stalker = document.getElementsByClassName('stalker'); 
+        color();
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+    //console.log(stalker)
+    stalker[0].style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});
+var r = 0;
+var g = 0;
+var b = 0;
+
+var x = 0;
+function color(){
+    x += 5;
+    r = 128 + 127 * Math.cos(x / 180 * Math.PI);
+    g = 128 + 127 * Math.cos((x + 120) / 180 * Math.PI);
+    b = 128 + 127 * Math.cos((x - 120) / 180 * Math.PI);
+    stalker[0].style.background = `rgb(${r},${g},${b})`
+    setTimeout(color, 50);
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #101010;
+   overflow: hidden;
+
+}
+
+.window {
+    margin-left: -2%;
+    width: 110%;
+    height: 100%;
+  position: absolute;
+  z-index: 1;
+	}
+
+.container {
+    float: left;
+	height: 100%;
+    width: 50px;
+    margin-top: -13px;
+}
+
+.container:nth-of-type(odd) {
+    margin-top: 36px;
+}
+
+.container:nth-of-type(n+1) {
+    margin-left: -22px;
+}
+
+.hexagon {
+  position: relative;
+  width: 50px; 
+  height: 28.87px;
+  margin: 14.43px 0;
+  margin-bottom: 69px;
+  /*-webkit-transition: 0.4s ease;*/
+}
+
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  /*-webkit-transition: 0.4s ease;*/
+}
+
+.hexagon:before {
+  bottom: 100%;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+}
+
+.ful {
+  background: linear-gradient(30deg, rgb(18,18,18,1) 0%, rgb(18,18,18,1) 50%, rgb(28,28,28,1) 50%, rgb(28,28,28,1) 100%);
+  /*background: linear-gradient(180deg, rgb(28,28,28,1) 0%, rgb(28,28,28,1) 50%, rgb(18,18,18,1) 50%, rgb(18,18,18,1) 100%);*/
+ 
+}
+
+.ful:before {
+  border-bottom: 14.43px solid rgb(28,28,28,1);
+}
+
+.ful:after {
+  border-top: 14.43px solid rgb(18,18,18,1);
+}
+.stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -50px;     
+  left: -50px;    
+  width: 100px;   
+  height: 100px;  
+  background: rgb(0, 255, 98);
+  filter: blur(20px);
+  border-radius: 50%;
+  z-index: 0;
+}
